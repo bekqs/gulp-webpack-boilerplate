@@ -3,6 +3,7 @@ var webpack = require('webpack-stream');
 var watch = require('gulp-watch');
 var named = require('vinyl-named');
 var sass = require('gulp-sass');
+var neat = require('bourbon-neat').includePaths;
 var wait = require('gulp-wait');
 var autoprefixer = require('gulp-autoprefixer');
 // paths
@@ -26,7 +27,11 @@ gulp.task('sass', function () {
         .src(sassInput)
         .pipe(wait(500))
         .pipe(named())
-        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        .pipe(sass({
+            outputStyle: 'compressed',
+            sourcemaps: true,
+            includePaths: neat
+        }).on('error', sass.logError))
         .pipe(autoprefixer())
         .pipe(gulp.dest(sassOutput));
 });

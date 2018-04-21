@@ -4,6 +4,6 @@
     justify-content: $justify;
 }
 
-@mixin transition($prop: all, $ease: ease-out, $dur: .4s) {
+@mixin transition($prop: all, $ease: ease-out, $dur: .2s) {
     transition: $prop $ease $dur;
 }

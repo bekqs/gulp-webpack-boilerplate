@@ -10,13 +10,64 @@
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 </head>
 <body>
-    <section class="header">
-        <div class="header__profile">
-            <img src="./src/images/profile_image.jpg" alt="Profile photo" class="header__profile-photo">
-            <h5 class="header__profile--name">Jessica Parker</h5>
-            <a class="header__profile--location"><i class="ion-ios-location-outline"></i> Newport Beach, CA</a>
-            <a class="header__profile--phone"><i class="ion-ios-telephone-outline"></i> (949) 325 - 68594</a>
+    <header class="header">
+        <button type="submit" class="header__button header__button--logout">Log Out</button>
+
+        <div class="header__cover">
+            <input type="file" name="file" id="file" class="header__cover__file">
+            <label for="file" class="header__button header__button--upload">
+                <i class="ion-ios-camera"></i> Upload Cover Image
+            </label>
         </div>
+        
+        <figure class="header__figure">
+            <img src="./src/images/profile_image.jpg" alt="Profile photo" class="header__figure__photo">
+        </figure>
+
+        <section class="header__profile">
+            <h5 class="header__profile__name">Jessica Parker</h5>
+            <a href="#" class="header__profile__location">
+                <i class="ion-ios-location-outline"></i> Newport Beach, CA
+            </a>
+            <a href="tel:949 325 68594" class="header__profile__phone">
+                <i class="ion-ios-telephone-outline"></i> (949) 325 - 68594
+            </a>
+            <div class="header__profile__reviews">
+                <div class="rating">
+                    <div class="rating__wrap">
+                        <input class="rating__input" id="star-rating-5" type="radio" name="rating" value="5">
+                        <label class="rating__icon ion-android-star-outline" for="star-rating-5"></label>
+                        <input class="rating__input" id="star-rating-4" type="radio" name="rating" value="4">
+                        <label class="rating__icon ion-android-star-outline" for="star-rating-4"></label>
+                        <input class="rating__input" id="star-rating-3" type="radio" name="rating" value="3">
+                        <label class="rating__icon ion-android-star-outline" for="star-rating-3"></label>
+                        <input class="rating__input" id="star-rating-2" type="radio" name="rating" value="2">
+                        <label class="rating__icon ion-android-star-outline" for="star-rating-2"></label>
+                        <input class="rating__input" id="star-rating-1" type="radio" name="rating" value="1">
+                        <label class="rating__icon ion-android-star-outline" for="star-rating-1"></label>
+                    </div>
+                </div>
+                <span class="header__profile__reviews--text">6 Reviews</span>
+            </div>
+        </section>
+
+        <nav class="header__menu">
+            <ul class="header__menu__list">
+                <li class="header__menu__item header__menu__item--active"><a href="#">About</a></li>
+                <li class="header__menu__item"><a href="#">Settings</a></li>
+                <li class="header__menu__item"><a href="#">Option 1</a></li>
+                <li class="header__menu__item"><a href="#">Option 2</a></li>
+                <li class="header__menu__item"><a href="#">Option 3</a></li>
+            </ul>
+            <span class="header__menu__followers">
+                <a href="#"><i class="ion-ios-plus"></i></a>
+                <span class="header__menu__followers--num">15</span> Followers
+            </span>
+        </nav>
+    </header>
+
+    <section class="main">
+        <h3 class="main__title">About</h3>
     </section>
 
     <script src="./dist/app.bundle.js"></script>

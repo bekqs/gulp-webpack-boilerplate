@@ -1,0 +1,36 @@
+.header {
+    &__button {
+        border-radius: 4px;
+        border: 1px solid transparent;
+        cursor: pointer;
+        &--logout {
+            padding: .4em .8em;
+            text-transform: uppercase;
+            font-weight: $bold;
+            font-size: .750em;
+            border-color: $accent;
+            color: $accent;
+            background: transparent;
+            @include transition;
+            &:hover {
+                background: $accent;
+                color: $white;
+            }
+        }
+        &--upload {
+            padding: 4px 20px 12px;
+            font-size: $small;
+            color: $text-light;
+            background: transparent;
+            display: inline-block;
+            border-color: $text-pale;
+            i {
+                color: $text-pale;
+                position: relative;
+                top: 3px;
+                font-size: 28px;
+                padding-right: 10px;
+            }
+        }
+    }    
+}

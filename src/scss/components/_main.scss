@@ -1,0 +1,11 @@
+.main {
+    @include grid-column(10);
+    @include grid-push(1);
+    background: $white;
+    box-shadow: $shadow;
+    padding: 45px 40px;
+    height: 500px;
+    &__title {
+        color: $text-light;
+    }
+}

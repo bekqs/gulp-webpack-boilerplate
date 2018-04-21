@@ -1,0 +1,27 @@
+.rating {
+    float: left;
+    margin-right: 30px;
+    margin-top: 3px;
+    &__wrap {
+        display: inline-block;
+        font-size: $big;
+    }
+    &__icon {
+        float: right;
+        padding-left: 2px;
+        cursor: pointer;
+        color: $text-light;
+        &:hover {
+            &:before,
+            ~.rating__icon:before {
+                content: "\f2fc";
+            }
+        }
+    }
+    &__input {
+        display: none;
+        &:checked~.rating__icon:before {
+            content: "\f2fc";
+        }
+    }
+}
