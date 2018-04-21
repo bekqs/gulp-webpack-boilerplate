@@ -1,0 +1,12 @@
+{
+  "presets": [
+    ["env", {
+      "modules": false,
+      "targets": {
+        "browsers": ["last 2 versions", "not ie <= 10"]
+      },
+      "useBuiltIns": "usage",
+      "debug": true
+    }]
+  ]
+}

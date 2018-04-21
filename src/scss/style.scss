@@ -1,0 +1,12 @@
+@import "base/_reset";
+@import "helpers/_variables";
+@import "helpers/_mixins";
+@import "components/_header";
+
+body {
+    width: 100%;
+    height: 100%;
+    background: $background;
+    font-family: $font;
+    
+}

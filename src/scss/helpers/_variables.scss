@@ -1,0 +1,20 @@
+$background: #f5f8f9;
+$section-color: #fff;
+$font-color: #333;
+$accent-color: #007ee5;
+$font: 'Open Sans', sans-serif;
+$normal: 400;
+$medium: 600;
+$bold: 700;
+$head: 2.5em;
+$small: .875em;
+$big: 1.125em;
+$bigger: 1.750em;
+$base-font-size: 16px;
+$heading-scale: 8;
+
+@for $i from 1 through 6 {
+    h#{$i} {
+        font-size: $base-font-size + $heading-scale * (6 - $i);
+    }
+}
