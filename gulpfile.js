@@ -6,13 +6,14 @@ var sass = require('gulp-sass');
 var neat = require('bourbon-neat').includePaths;
 var wait = require('gulp-wait');
 var autoprefixer = require('gulp-autoprefixer');
+var imagemin = require('gulp-imagemin');
 // paths
 var jsInput = './src/scripts/app.js';
 var jsOutput = './dist';
 var sassInput = './src/scss/*.scss';
 var sassOutput =  './dist/css/';
 
-gulp.task('default', ['webpack', 'sass', 'watch']);
+gulp.task('default', ['webpack', 'sass', 'imagemin', 'watch']);
 
 gulp.task('webpack', function() {
     return gulp
@@ -34,6 +35,12 @@ gulp.task('sass', function () {
         }).on('error', sass.logError))
         .pipe(autoprefixer())
         .pipe(gulp.dest(sassOutput));
+});
+
+gulp.task('imagemin', function() {
+    gulp.src('src/images/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('dist/images'))
 });
 
 gulp.task('watch', function() {

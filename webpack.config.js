@@ -1,11 +1,11 @@
 var path = require('path');
 var webpack = require('webpack');
 var babel = require('babel-loader');
-var polyfill = require('babel-polyfill');
+require('babel-polyfill');
 
 module.exports =  {
     // mode: 'development',
-    devtool: 'eval-source-map',
+    devtool: 'cheap-module-source-map',
     context: path.resolve(__dirname, './src'),
     entry: {
         app: ['babel-polyfill', './scripts/app.js']
