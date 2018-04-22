@@ -16,4 +16,4 @@ Used technologies:
 * Sass
 
 Link to:
-**[Demo page](bekqs.com)**.
+**[Demo page](https://bekqs.bitbucket.io/)**.
