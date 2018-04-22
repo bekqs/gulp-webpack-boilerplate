@@ -42,9 +42,10 @@
     }
 }
 
-.bubble {
-    &__button {
-        text-transform: uppercase;
+.button {
+    text-transform: uppercase;
+    &--save,
+    &--cancel {
         padding: 12px 30px;
         border-radius: 3px;
         font-weight: $bold;
@@ -52,20 +53,56 @@
         margin-right: 20px;
         cursor: pointer;
         @include transition;
-        &--save {
-            background: $accent;
-            color: $white;
-            &:hover {
-                opacity: .9;
+        @include mobile {
+            float: right;
+            position: relative;
+            padding: 6px 15px;
+            bottom: 35px;
+            margin-right: 0;
+            margin-left: 10px;
+        }
+    }
+    &--save {
+        background: $accent;
+        color: $white;
+        &:hover {
+            opacity: .9;
+        }
+    }
+    &--cancel {
+        background: $white;
+        color: $accent;
+        border-color: $accent;
+        &:hover {
+            opacity: .9;
+        }
+    }
+    &--edit {
+        font-size: $big;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #ecf1f5;
+        height: 46px;
+        width: 46px;
+        line-height: 46px;
+        text-align: center;
+        cursor: pointer;
+        @include transition;
+        @include mobile {
+            display: none;
+        }
+        &--mobile {
+            top: -22px;
+            right: 0;
+            display: none;
+            @include mobile {
+                display: block;
             }
         }
-        &--cancel {
-            background: $white;
-            color: $accent;
-            border-color: $accent;
-            &:hover {
-                opacity: .9;
-            }
+        &:hover {
+            background: $accent;
+            color: $white;
         }
     }
 }

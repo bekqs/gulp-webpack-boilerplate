@@ -1,6 +1,9 @@
 .input-group { 
     position: relative; 
-    margin-bottom: 20px;
+    margin: 20px 0 20px;
+    @include mobile {
+        margin-top: 40px;
+    }
     &__label {
         color: $text-light;
         font-size: 1em;
@@ -12,16 +15,18 @@
         @include transition;
     }
     &__input {
-        font-size: $big;
+        font-size: 1em;
         padding: 8px 0;
         display: block;
         width: 100%;
-        border-bottom: 1px solid $text-pale;
+        color: $text-light;
+        border-bottom: 1px solid $gray;
         &:focus ~ label,
         &:valid ~ label {
             top: -20px;
-            font-size: 14px;
-            color: $accent;
+            font-size: $small;
+            color: $gray;
+            text-transform: uppercase;
         }
     }
     &__bar {
