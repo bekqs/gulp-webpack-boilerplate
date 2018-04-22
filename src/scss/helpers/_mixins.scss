@@ -7,3 +7,24 @@
 @mixin transition($prop: all, $ease: ease-out, $dur: .2s) {
     transition: $prop $ease $dur;
 }
+
+$tablet-width: 768px;
+$desktop-width: 1025px;
+
+@mixin mobile {
+    @media (max-width: #{$tablet-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}

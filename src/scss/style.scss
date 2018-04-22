@@ -6,6 +6,8 @@
 @import "components/_buttons";
 @import "components/_rating";
 @import "components/_main";
+@import "components/_bubble";
+@import "components/_inputs";
 
 body {
     width: 100%;
@@ -14,5 +16,6 @@ body {
     background: $background;
     font-family: $font;
     color: $text-dark;
+    overflow: auto;
     @include grid-container();
 }

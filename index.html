@@ -25,13 +25,10 @@
         </figure>
 
         <section class="header__profile">
-            <h5 class="header__profile__name">Jessica Parker</h5>
-            <a href="#" class="header__profile__location">
-                <i class="ion-ios-location-outline"></i> Newport Beach, CA
-            </a>
-            <a href="tel:949 325 68594" class="header__profile__phone">
-                <i class="ion-ios-telephone-outline"></i> (949) 325 - 68594
-            </a>
+            <h5 class="header__profile--name">Jessica Parker</h5>
+            <p class="header__profile--location">Newport Beach, CA</p>
+            <a href="tel:949 325 68594" class="header__profile--phone">(949) 325 - 68594</a>
+
             <div class="header__profile__reviews">
                 <div class="rating">
                     <div class="rating__wrap">
@@ -53,7 +50,7 @@
 
         <nav class="header__menu">
             <ul class="header__menu__list">
-                <li class="header__menu__item header__menu__item--active"><a href="#">About</a></li>
+                <li class="header__menu__item header__menu__item--first active"><a href="#">About</a></li>
                 <li class="header__menu__item"><a href="#">Settings</a></li>
                 <li class="header__menu__item"><a href="#">Option 1</a></li>
                 <li class="header__menu__item"><a href="#">Option 2</a></li>
@@ -68,7 +65,36 @@
 
     <section class="main">
         <h3 class="main__title">About</h3>
+        <div class="main__about">
+            <div class="main__about__detail">
+                <h6 class="main__about__detail--name">Jessica Parker</h6>
+                <button id="edit-name" class="main__about__detail--edit"><i class="ion-edit"></i></button>
+            </div>
+            <div class="main__about__detail">
+                <a href="https://seller.com" target="_blank" class="main__about__detail--website">www.seller.com</a>
+                <button id="edit-website" class="main__about__detail--edit"><i class="ion-edit"></i></button>
+            </div>
+            <div class="main__about__detail">
+                <a href="tel:949 325 68594" class="main__about__detail--phone">(949) 325 - 68594</a>
+                <button id="edit-phone" class="main__about__detail--edit"><i class="ion-edit"></i></button>
+            </div>
+            <div class="main__about__detail">
+                <p class="main__about__detail--location">Newport Beach, CA</p>
+                <button id="edit-location" class="main__about__detail--edit"><i class="ion-edit"></i></button>
+            </div>
+        </div>
     </section>
+
+    <div id="bubble" class="bubble">
+        <div class="input-group">      
+            <input id="bubble-input" type="text" class="input-group__input" required>
+            <span class="input-group__highlight"></span>
+            <span class="input-group__bar"></span>
+            <label id="bubble-label" class="input-group__label"></label>
+        </div>
+        <button id="bubble-save" class="bubble__button bubble__button--save">Save</button>
+        <button id="bubble-cancel" class="bubble__button bubble__button--cancel">Cancel</button>
+    </div>
 
     <script src="./dist/app.bundle.js"></script>
 </body>

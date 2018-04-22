@@ -1,8 +1,19 @@
 .header {
     @include grid-column(10);
     @include grid-push(1);
-    @include grid-container;
+    @include tablet {
+        @include grid-column(12);
+    }
+    @include mobile {
+        width: 100%;
+        margin: 0;
+        height: auto;
+        background: transparent;
+        padding: 0;
+    }
+    box-sizing: border-box;
     position: relative;
+    padding: 0 22px;
     background: $white;
     border-radius: 3px;
     height: 300px;
@@ -16,7 +27,6 @@
         }
     }
     &__figure {
-        @include grid-column(4);
         @include flex-center;
         position: absolute;
         width: 170px;
@@ -25,37 +35,68 @@
         overflow: hidden;
         box-shadow: 0 0 20px rgba(#000, .15);
         z-index: 2;
+        @include mobile {
+            width: 128px;
+            height: 128px;
+            position: relative;
+            margin: 30px auto 0;
+        }
         &__photo {
             width: auto;
             height: 100%;
         }
     }
     &__profile {
-        @include grid-column(10);
-        @include grid-push(2);
+        box-sizing: border-box;
+        width: calc(100% - 247px);
+        left: 225px;
         position: absolute;
         bottom: 75px;
-        &__name {
-            line-height: $line-height;
+        @include mobile {
+            width: 100%;
+            left: 0;
+            position: relative;
+            bottom: auto;
+            padding: 0 22px;
         }
-        &__location, &__phone {
+        &--name {
+            line-height: $line-height;
+            @include mobile {
+                text-align: center
+            }
+        }
+        &--location, &--phone {
             display: block; 
             float: left; 
             clear: left; 
             margin-top: .5em;
             font-size: $small;
-            i {
-                margin-right: 10px;
+            &:before {
+                font-family: 'Ionicons';
                 font-size: 18px;
+                margin-right: 10px;
+                color: $text-light;
             }
         }
+        &--location:before {
+            content: "\f455";
+        }
+        &--phone:before {
+            content: "\f4b8";
+        }
         &__reviews {
-            float: right;
+            display: inline-block;
             color: $text-light;
             position: absolute;
             width: auto;
             top: 0;
             right: 0;
+            @include mobile {
+                position: relative;
+                display: block;
+                clear: both;
+                top: 10px;
+            }
             &--text {
                 font-size: $smaller;
                 font-weight: $medium;
@@ -65,13 +106,31 @@
     &__menu {
         position: absolute;
         bottom: 0;
+        left: 0;
         width: 100%;
         height: 60px;
         background: $white;
         box-shadow: $shadow;
+        @include mobile {
+            position: relative;
+            margin-top: 22px;
+        }
         &__list {
-            @include grid-column(10);
-            @include grid-push(2);
+            position: absolute;
+            left: 225px;
+            width: auto;
+            overflow: hidden;
+            white-space: nowrap;
+            @include tablet {
+                overflow-x: scroll;
+                width: 300px;
+            }
+            @include mobile {
+                overflow-x: scroll;
+                width: 100%;
+                left: 0;
+                position: relative;
+            }
         }
         &__item {
             line-height: 58px;
@@ -80,8 +139,13 @@
             margin-right: 30px;
             border-bottom: 2px solid transparent;
             @include transition;
-            &--active, &:hover {
+            &.active, &:hover {
                 border-bottom: 2px solid $accent;
+            }
+            @include mobile {
+                &--first {
+                    margin-left: 30px;
+                }
             }
         }
         &__followers{
@@ -108,7 +172,7 @@
         }
     }
     &__cover {
-        @include grid-push(-2);
+        margin: auto;
         text-align: center;
         margin-top: 75px;
         &__file {

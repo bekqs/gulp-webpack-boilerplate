@@ -1,11 +1,81 @@
 .main {
     @include grid-column(10);
     @include grid-push(1);
+    @include tablet {
+        @include grid-column(12);
+    }
+    @include mobile {
+        width: 100%;
+        margin: 15px 0;
+        padding: 45px 22px;
+        position: relative;
+    }
+    box-sizing: border-box;
     background: $white;
     box-shadow: $shadow;
     padding: 45px 40px;
+    margin-bottom: 100px;
     height: 500px;
     &__title {
         color: $text-light;
+    }
+    &__about {
+        margin-top: 35px;
+        &__detail {
+            position: relative;
+            background: #f5f8f8;
+            margin-top: 2px;
+            width: 300px;
+            height: 46px;
+            padding-left: 10px;
+            @include mobile {
+                background: transparent;
+                width: auto;
+                height: 36px;
+                padding-left: 0;
+            }
+            &--name {
+                line-height: 46px;
+            }
+            &--website, &--phone, &--location {
+                font-size: $small;
+                line-height: 46px;
+                &:before {
+                    font-family: 'Ionicons';
+                    font-size: 18px;
+                    margin-right: 10px;
+                    color: #a8b8c4;
+                }
+            }
+            &--website:before {
+                content: "\f276";
+            }
+            &--phone:before {
+                content: "\f4b8";
+            }
+            &--location:before {
+                content: "\f447";
+            }
+            &--edit {
+                font-size: $big;
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: #ecf1f5;
+                height: 100%;
+                width: 46px;
+                line-height: 46px;
+                text-align: center;
+                cursor: pointer;
+                @include transition;
+                @include mobile {
+                    display: none;
+                }
+                &:hover {
+                    background: $accent;
+                    color: $white;
+                }
+            }
+        }
     }
 }

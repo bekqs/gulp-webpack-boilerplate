@@ -1,0 +1,96 @@
+.input-group { 
+    position: relative; 
+    margin-bottom: 20px;
+    &__label {
+        color: $text-light;
+        font-size: 1em;
+        font-weight: normal;
+        position: absolute;
+        pointer-events: none;
+        left: 5px;
+        top: 10px;
+        @include transition;
+    }
+    &__input {
+        font-size: $big;
+        padding: 8px 0;
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid $text-pale;
+        &:focus ~ label,
+        &:valid ~ label {
+            top: -20px;
+            font-size: 14px;
+            color: $accent;
+        }
+    }
+    &__bar {
+        position: absolute;
+        display: block;
+        width: 100%;
+        &:before,
+        &:after {
+            content: '';
+            height: 1px;
+            width: 0;
+            bottom: 0;
+            position: absolute;
+            background: $accent;
+            @include transition;
+        }
+        &:before {
+            left: 50%;
+        }
+        &:after {
+            right: 50%;
+        }
+    }
+    &__input:focus ~ &__bar {
+        &:before,
+        &:after {
+            width: 50%;
+        }
+    }
+    &__highlight {
+        position: absolute;
+        height: 60%;
+        width: 100px;
+        top: 25%;
+        left: 0;
+        pointer-events: none;
+        opacity: 0.5;
+    }
+    &__input:focus ~ &__highlight {
+        animation: inputHighlighter 0.3s ease;
+    }
+}
+
+@-webkit-keyframes inputHighlighter {
+    from {
+        background: $accent;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-moz-keyframes inputHighlighter {
+    from {
+        background: $accent;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: $accent;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
