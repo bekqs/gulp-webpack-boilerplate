@@ -1,4 +1,3 @@
-import 'babel-polyfill';
 import saveMobile from './modules/editMobile';
 
 const [headerName, headerLocation, headerPhone] = document.querySelectorAll('#header-name, #header-location, #header-phone');
