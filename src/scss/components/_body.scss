@@ -1,4 +1,4 @@
-.header {
+.main {
     @include grid-column(10);
     @include grid-push(1);
     @include tablet {
@@ -8,13 +8,14 @@
         @include grid-column(12);
     }
     box-sizing: border-box;
-    position: relative;
-    padding: 0 22px;
+    background: tomato;
     margin-top: 3em;
-    height: auto;
-    background: cadetblue;
-    &__heading {
-        position: relative;
+    padding: 0 22px;
+    &__paragraph {
         padding: 22px 0;
+        width: 60%;
+    }
+    &__image {
+        border: 5px solid white;
     }
 }

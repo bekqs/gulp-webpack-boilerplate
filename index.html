@@ -3,156 +3,20 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Profile</title>
+    <title>Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./dist/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,600,700" rel="stylesheet">
 </head>
 <body>
     <header class="header">
-        <button type="submit" class="header__button header__button--logout">Log Out</button>
-
-        <div class="header__cover">
-            <input type="file" name="file" id="file" class="header__cover__file">
-            <label for="file" class="header__button header__button--upload">
-                <i class="ion-ios-camera"></i> Upload Cover Image
-            </label>
-        </div>
-        
-        <figure class="header__figure">
-            <img src="./dist/images/profile_image.jpg" alt="Profile photo" class="header__figure__photo">
-        </figure>
-
-        <section class="header__profile">
-            <h5 id="header-name" class="header__profile--name">Jessica Parker</h5>
-            <p id="header-location" class="header__profile--location">Newport Beach, CA</p>
-            <a id="header-phone" href="tel:949 325 68594" class="header__profile--phone">(949) 325 - 68594</a>
-
-            <div class="header__profile__reviews">
-                <div class="rating">
-                    <div class="rating__wrap">
-                        <input class="rating__input" id="star-rating-5" type="radio" name="rating" value="5">
-                        <label class="rating__icon ion-android-star-outline" for="star-rating-5"></label>
-                        <input class="rating__input" id="star-rating-4" type="radio" name="rating" value="4">
-                        <label class="rating__icon ion-android-star-outline" for="star-rating-4"></label>
-                        <input class="rating__input" id="star-rating-3" type="radio" name="rating" value="3">
-                        <label class="rating__icon ion-android-star-outline" for="star-rating-3"></label>
-                        <input class="rating__input" id="star-rating-2" type="radio" name="rating" value="2">
-                        <label class="rating__icon ion-android-star-outline" for="star-rating-2"></label>
-                        <input class="rating__input" id="star-rating-1" type="radio" name="rating" value="1">
-                        <label class="rating__icon ion-android-star-outline" for="star-rating-1"></label>
-                    </div>
-                </div>
-                <span class="header__profile__reviews--text">6 Reviews</span>
-            </div>
-        </section>
-
-        <span class="header__followers">
-            <a href="#"><i class="ion-ios-plus"></i></a>
-            <span class="header__followers--num">15</span> Followers
-        </span>
-
-        <nav class="header__menu">
-            <ul class="header__menu__list">
-                <li class="header__menu__item header__menu__item--first active"><a href="#">About</a></li>
-                <li class="header__menu__item"><a href="#">Settings</a></li>
-                <li class="header__menu__item"><a href="#">Option 1</a></li>
-                <li class="header__menu__item"><a href="#">Option 2</a></li>
-                <li class="header__menu__item"><a href="#">Option 3</a></li>
-            </ul>
-        </nav>
+        <h1 class="header__heading">Hello World!</h1>
     </header>
 
     <section class="main">
-        <div class="tab tab--about tab--current">
-            <h3 class="tab__title tab__title--about">About</h3>
-
-            <button id="edit-mobile" class="button--edit button--edit--mobile">
-                <i class="ion-edit"></i>
-            </button>
-            <div class="tab--about__detail">
-                <h6 id="detail-name" class="tab--about__detail--name">Jessica Parker</h6>
-                <button id="edit-name" class="button--edit">
-                    <i class="ion-edit"></i>
-                </button>
-            </div>
-            <div class="tab--about__detail">
-                <a id="detail-url" href="https://seller.com" target="_blank" class="tab--about__detail--website">www.seller.com</a>
-                <button id="edit-website" class="button--edit">
-                    <i class="ion-edit"></i>
-                </button>
-            </div>
-            <div class="tab--about__detail">
-                <a id="detail-phone" href="tel:949 325 68594" class="tab--about__detail--phone">(949) 325 - 68594</a>
-                <button id="edit-phone" class="button--edit">
-                    <i class="ion-edit"></i>
-                </button>
-            </div>
-            <div class="tab--about__detail">
-                <p id="detail-location" class="tab--about__detail--location">Newport Beach, CA</p>
-                <button id="edit-location" class="button--edit">
-                    <i class="ion-edit"></i>
-                </button>
-            </div>
-        </div>
-
-        <div class="tab tab--settings">
-            <h3 class="tab__title tab__title--settings">Settings</h3>
-        </div>
-
-        <div class="tab tab--option1">
-            <h3 class="tab__title tab__title--option1">Option 1...</h3>
-        </div>
-
-        <div class="tab tab--option2">
-            <h3 class="tab__title tab__title--option2">Option 2...</h3>
-        </div>
-
-        <div class="tab tab--option3">
-            <h3 class="tab__title tab__title--option3">Option 3...</h3>
-        </div>
-
-        <form id="edit-form" class="main__form">
-            <button id="mobile-save" class="button button--save" formnovalidate>Save</button>
-            <button id="mobile-cancel" class="button button--cancel">Cancel</button>
-            <div class="input-group input-group__first">      
-                <input id="input-name" type="text" class="input-group__input" required>
-                <span class="input-group__highlight"></span>
-                <span class="input-group__bar"></span>
-                <label class="input-group__label">Full Name</label>
-            </div>
-            <div class="input-group">      
-                <input id="input-url" type="url" class="input-group__input" required>
-                <span class="input-group__highlight"></span>
-                <span class="input-group__bar"></span>
-                <label class="input-group__label">Website</label>
-            </div>
-            <div class="input-group">      
-                <input id="input-phone" type="tel" class="input-group__input" required>
-                <span class="input-group__highlight"></span>
-                <span class="input-group__bar"></span>
-                <label class="input-group__label">Phone Number</label>
-            </div>
-            <div class="input-group">      
-                <input id="input-location" type="text" class="input-group__input" required>
-                <span class="input-group__highlight"></span>
-                <span class="input-group__bar"></span>
-                <label class="input-group__label">City, State & Zip</label>
-            </div>
-        </form>
+        <p class="main__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas consectetur nihil, ex atque aliquam voluptate temporibus! Excepturi quae ab nemo! Nostrum voluptatum rem quo, aliquid magnam eligendi perferendis voluptatibus consectetur.</p>
+        <img src="./dist/images/image.png" alt="Test image" class="main__image">
     </section>
-
-    <div id="bubble" class="bubble">
-        <div class="input-group">      
-            <input id="bubble-input" type="text" class="input-group__input" required>
-            <span class="input-group__highlight"></span>
-            <span class="input-group__bar"></span>
-            <label id="bubble-label" class="input-group__label"></label>
-        </div>
-        <button id="bubble-save" class="button button--save">Save</button>
-        <button id="bubble-cancel" class="button button--cancel">Cancel</button>
-    </div>
 
     <script src="./dist/app.bundle.js"></script>
 </body>

@@ -1,22 +1,14 @@
 $background: #f5f8f9;
 $white: #fff;
 $text-dark: #333;
-$text-light: #727e88;
-$text-pale: #d0dce7;
-$gray: #a6b0b7;
-$accent: #007ee5;
-$shadow: 0 1px 6px rgba(#727e88, .28);
-$font: 'Open Sans', sans-serif;
+$font: 'Roboto', sans-serif;
 $normal: 400;
 $medium: 600;
 $bold: 700;
-$small: .875em;
-$smaller: .750em;
-$big: 1.125em;
-$line-height: 1.571em;
+$line-height: 1.5em;
 
 $base-font-size: 16px;
-$heading-scale: 4;
+$heading-scale: 8;
 
 @for $i from 1 through 6 {
     h#{$i} {

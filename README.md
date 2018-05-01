@@ -1,5 +1,6 @@
-# BE_SO
-### Profile page template
+# Gulp + Webpack
+
+Boilerplate for Gulp + Webpack project.
 
 ---
 
@@ -14,6 +15,3 @@ Used technologies:
 * Babel
 * Gulp
 * Sass
-
-Link to:
-**[Demo page](https://bekqs.bitbucket.io/)**.
